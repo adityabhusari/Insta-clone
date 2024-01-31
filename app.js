@@ -18,8 +18,11 @@ app.use(cors(
         methods: ['GET', 'POST', 'PATCH', 'DELETE']
     }
 ));
-
-
+app.get('/', (req, res) => {
+    res.json({
+        message: "Hellp"
+    })
+});
 app.use('/users', userRouter);
 app.use('/', postsRouter);
 
